@@ -1,0 +1,48 @@
+@Версия без аргументов 
+power [hello] then
+    Print-n["Hello, World!"]
+end_power
+
+@Версия с аргументами
+
+power [hello] then
+    name = args.get[0] or "World"
+    Print-n["Hello, #{name}!"]
+end_power
+
+@Многострочный ввод
+
+power [greeting] then
+    message = """
+    ==============
+    Hello, PowerShine!
+    Version: #{Ps.version}
+    ==============
+    """
+    Print-n[message]
+end_power
+
+@Hello, World! как функция 
+
+super hello[name: str] -> str then
+    return "Привет, #{name}!"
+end_super
+
+power [main] then
+    greeting = hello["мир"]
+    Print-n[greeting]
+end_power
+
+@Интерграционная версия
+
+locales = {
+    "en": "Hello",
+    "es": "Hola",
+    "ru": "Привет"
+}
+
+power [hello_i18n] then
+    lang = args.get[0] or "en"
+    word = locales.get[lang] or "Hello"
+    Print-n["#{word}, World!"]
+end_power
