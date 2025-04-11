@@ -29,7 +29,7 @@
 
 ```pshn
 power [demo] then  
-    Print-n["Привет, PowerShine 2.0!"]  
+    Print-n["Привет, PowerShine!"]  
 end_power
 ```
 
