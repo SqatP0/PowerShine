@@ -39,7 +39,7 @@ end_power
 ## **2. Установка**  
 ### **2.1. Инсталляция**  
 ```bash
-pkg install powershine -x --stable
+pkg install powershine -y
 ```  
 ### **2.2. Проверка**  
 ```bash
